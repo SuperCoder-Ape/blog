@@ -40,7 +40,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
-  <meta name="baidu-site-verification" content="code-fqMXCebWbL" />
+  <meta name="baidu-site-verification" content="code-I4Z8UHMWeY" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="It&#39;s an IT blog..."/>
@@ -223,17 +223,6 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               关于
@@ -245,9 +234,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -259,6 +248,17 @@
             <a href="/archive/">
               
               归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
               
               
             </a>
@@ -446,9 +446,11 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>提示：本文仅介绍常见加密技术，不对具体加密原理做分析</code></p>
+        <h1>前言</h1>
+<p><code>提示：本文仅介绍常见加密技术，不对具体加密原理做分析</code></p>
 <hr>
-<h1 id="一、对称加密"><a href="#一、对称加密" class="headerlink" title="一、对称加密"></a>一、对称加密</h1><p><strong>使用同一密钥进行加密和解密</strong></p>
+<h1>一、对称加密</h1>
+<p><strong>使用同一密钥进行加密和解密</strong></p>
 <p>优势：加解密速度快，密文紧凑（加密后的密文大小不会变化太大）。</p>
 <p>缺点：</p>
 <ul>
@@ -462,14 +464,16 @@
 </blockquote>
 <p><strong>著名对称加密算法</strong>：DES、3DES，AES，RC系列（RC2、RC4、RC5）</p>
 <p><strong>1、DES（Data Encryption Standard）</strong></p>
-<p> 20世纪70年代由IBM公司发明，1976年11月纳为美国国家标准，DES是一种块或分组加密算法，密钥是固定的56bit，不安全，以块模式对64bit的密文块进行操作。<br><img src="https://img-blog.csdnimg.cn/e82388e094cd4ae29936e45302e4dbed.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><strong>DES的两种模式</strong></p>
+<p>20世纪70年代由IBM公司发明，1976年11月纳为美国国家标准，DES是一种块或分组加密算法，密钥是固定的56bit，不安全，以块模式对64bit的密文块进行操作。<br>
+<img src="https://img-blog.csdnimg.cn/e82388e094cd4ae29936e45302e4dbed.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>
+<strong>DES的两种模式</strong></p>
 <ol>
 <li>EBC：相同明文加密后会得到相同的密文，相对不安全，可以使用统计学、尝试、部分破解等方式尝试破解。</li>
-<li><p>CBC：加密时会随机生成一个向量值，参与第一组明文的加密生成密文，第二组明文的向量由第一自密文得到，以此类推，相对安全，现在常用。</p>
+<li>CBC：加密时会随机生成一个向量值，参与第一组明文的加密生成密文，第二组明文的向量由第一自密文得到，以此类推，相对安全，现在常用。</li>
+</ol>
 <p><strong>总结：</strong></p>
-</li>
-<li><p>56bit的DES太短，不安全，需要经常修改密码，防止暴力破解（2的55次方次）</p>
-</li>
+<ol>
+<li>56bit的DES太短，不安全，需要经常修改密码，防止暴力破解（2的55次方次）</li>
 <li>需要一个安全的信道交换DES密钥</li>
 <li>使用DES的CBC模式，更安全</li>
 </ol>
@@ -486,12 +490,16 @@
 <p>1997年颁布，取代DES的加密算法，适用于高速网络，适合在硬件上实现，使用128位、192位或256位的密钥块，并且还能以32位的大小进行扩展。AES作为3DES的替代加密技术，软硬件运行效率较高，可用于无线或语音视频加密。</p>
 <p><strong>4、RC系列</strong></p>
 <ol>
-<li>RC2<br>密钥长度可变，运算速度比DES快，软件实现的RC2比DES快三倍左右，安全性是否比DES好取决于使用的密钥长度。</li>
-<li>RC4<br>密钥长度可变，是一种流模式加密算法，基于bit操作，算法基于随机置换，应用范围广（https/WEP/WPA）</li>
+<li>RC2<br>
+密钥长度可变，运算速度比DES快，软件实现的RC2比DES快三倍左右，安全性是否比DES好取决于使用的密钥长度。</li>
+<li>RC4<br>
+密钥长度可变，是一种流模式加密算法，基于bit操作，算法基于随机置换，应用范围广（https/WEP/WPA）</li>
 </ol>
-<h1 id="二、非对称加密"><a href="#二、非对称加密" class="headerlink" title="二、非对称加密"></a>二、非对称加密</h1><p><strong>非对称加密技术使用两个不同的密钥进行加解密，使用私钥加密则公钥解密，使用公钥加密则私钥解密。</strong></p>
+<h1>二、非对称加密</h1>
+<p><strong>非对称加密技术使用两个不同的密钥进行加解密，使用私钥加密则公钥解密，使用公钥加密则私钥解密。</strong></p>
 <ol>
-<li>公钥加密、私钥解密<br><img src="https://img-blog.csdnimg.cn/b17ad6fed04f4bea9b11f23b75eee668.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></li>
+<li>公钥加密、私钥解密<br>
+<img src="https://img-blog.csdnimg.cn/b17ad6fed04f4bea9b11f23b75eee668.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></li>
 <li>私钥加密、公钥解密（可以实现身份认证和抗抵赖性）</li>
 </ol>
 <p><img src="https://img-blog.csdnimg.cn/a2a4e6551fb64b3b84adcd650a2e2cc8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
@@ -512,13 +520,47 @@
 <li>数字签名：发送方使用自己的私钥签署报文，接收方用对方的公钥验证签名</li>
 <li>密钥交换：通信双方协商会话密钥</li>
 </ul>
-<p>常见非对称加密算法对上面三种用途的支持<br>|算法| 加密/解密 | 数字签名| 密钥交换 |<br>|—|—|—|—|<br>| RSA | √ | √| √ |<br>| DH |  | | √ |<br>| DSA |  | √| |</p>
-<h1 id="三、数字签名"><a href="#三、数字签名" class="headerlink" title="三、数字签名"></a>三、数字签名</h1><p>发送方将原始报文进行hash运算后使用私钥加密得到数字签名，然后同报文一起发送给接收方。接收方收到报文后，使用发送方公钥解密数字签名得到hash值，然后将接收到的报文进行hash运算后与解密数字签名得到的hash值做比较。如果一致则证明数据没有被篡改。<br><img src="https://img-blog.csdnimg.cn/9e69b2dac1e14164868b654826c2c417.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="四、数字证书"><a href="#四、数字证书" class="headerlink" title="四、数字证书"></a>四、数字证书</h1><blockquote>
+<p>常见非对称加密算法对上面三种用途的支持</p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>加密/解密</th>
+<th>数字签名</th>
+<th>密钥交换</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RSA</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>DH</td>
+<td></td>
+<td></td>
+<td>√</td>
+</tr>
+<tr>
+<td>DSA</td>
+<td></td>
+<td>√</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1>三、数字签名</h1>
+<p>发送方将原始报文进行hash运算后使用私钥加密得到数字签名，然后同报文一起发送给接收方。接收方收到报文后，使用发送方公钥解密数字签名得到hash值，然后将接收到的报文进行hash运算后与解密数字签名得到的hash值做比较。如果一致则证明数据没有被篡改。<br>
+<img src="https://img-blog.csdnimg.cn/9e69b2dac1e14164868b654826c2c417.webp?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h1>四、数字证书</h1>
+<blockquote>
 <p>因为发送方无法确认使用的公钥是否是真正接收方的，即无法确认公钥的真伪，所以需要数字证书来证明公钥的真伪。</p>
 </blockquote>
 <p>数字证书由权威机构CA认证中心颁发，里面包含所有者的信息、证书的信息、所有者的公钥以及认证中心的数字签名。用来保证公钥的真实性。</p>
-<h1 id="五、哈希与HMAC"><a href="#五、哈希与HMAC" class="headerlink" title="五、哈希与HMAC"></a>五、哈希与HMAC</h1><p> <strong>哈希：将一段任意长度的数据经过计算转换成一段定长的数据。</strong></p>
+<h1>五、哈希与HMAC</h1>
+<p><strong>哈希：将一段任意长度的数据经过计算转换成一段定长的数据。</strong></p>
 <blockquote>
 <p>常见Hash算法：MD5、SHA</p>
 </blockquote>
@@ -529,9 +571,17 @@
 <li>雪崩效应：输入发生轻微变化，都会导致Hash值发生巨大变化。</li>
 </ol>
 <p>经过MD5运算后的密文，可以通过一些网站得到明文。但并不是推算出来的，而是根据一些常见MD5运算的结果从数据库查出来的。<strong>可以通过加盐的方式避免这种问题。</strong></p>
-<p>如网站：<a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a><br><img src="https://img-blog.csdnimg.cn/99a525041dbb44cfb982ebffa7f906cb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><strong>HMAC：在哈希的基础上加key，即HMAC = Hash（数据 + key），但是需要双方预先知道这个key</strong><br><img src="https://img-blog.csdnimg.cn/a25f669d26614c5da5371eb1467c2182.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="六、对称加密与非对称加密的结合使用"><a href="#六、对称加密与非对称加密的结合使用" class="headerlink" title="六、对称加密与非对称加密的结合使用"></a>六、对称加密与非对称加密的结合使用</h1><p><strong>我们可以结合对称加密和非对称加密的特点来结合使用。使用非对称加密算法加密对称加密算法中的私钥，然后使用对称加密算法对大数据进行加密传输。</strong></p>
-<p><strong>发送方</strong><br><img src="https://img-blog.csdnimg.cn/1fff979a295640f6a956cbad2acb8d3a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><strong>接收方</strong><br><img src="https://img-blog.csdnimg.cn/b877312c29bd4808a274dd60d635e683.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br><strong>优点：</strong></p>
+<p>如网站：<a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com/</a><br>
+<img src="https://img-blog.csdnimg.cn/99a525041dbb44cfb982ebffa7f906cb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>
+<strong>HMAC：在哈希的基础上加key，即HMAC = Hash（数据 + key），但是需要双方预先知道这个key</strong><br>
+<img src="https://img-blog.csdnimg.cn/a25f669d26614c5da5371eb1467c2182.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<h1>六、对称加密与非对称加密的结合使用</h1>
+<p><strong>我们可以结合对称加密和非对称加密的特点来结合使用。使用非对称加密算法加密对称加密算法中的私钥，然后使用对称加密算法对大数据进行加密传输。</strong></p>
+<p><strong>发送方</strong><br>
+<img src="https://img-blog.csdnimg.cn/1fff979a295640f6a956cbad2acb8d3a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>
+<strong>接收方</strong><br>
+<img src="https://img-blog.csdnimg.cn/b877312c29bd4808a274dd60d635e683.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAUHVzaENvZGU=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><br>
+<strong>优点：</strong></p>
 <ol>
 <li>数据使用对称加密算法加解密，速度快且紧凑。</li>
 <li>通过数字签名的方式确定数据发送方的身份及抗抵赖。</li>
@@ -682,7 +732,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">一、对称加密</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">二、非对称加密</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">三、数字签名</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">四、数字证书</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81%E5%93%88%E5%B8%8C%E4%B8%8EHMAC"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">五、哈希与HMAC</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E4%B8%8E%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E7%9A%84%E7%BB%93%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">六、对称加密与非对称加密的结合使用</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前言</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">一、对称加密</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">二、非对称加密</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">三、数字签名</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">四、数字证书</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">五、哈希与HMAC</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">六、对称加密与非对称加密的结合使用</span></a></li></ol>
         
         </div>
       </aside>
