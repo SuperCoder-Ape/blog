@@ -234,9 +234,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              分类
+              归档
               
               
             </a>
@@ -245,9 +245,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              归档
+              分类
               
               
             </a>
@@ -458,8 +458,7 @@
       
     </h3>
     <div class="post-content-preview">
-      前言
-工厂模式是用工厂方法代替new操作的一种模式。著名的Jive论坛 ,就大量使用了工厂模式，工厂模式在Java程序系统可以说是随处可见。因为工厂模式就相当于创建实例对象的new，我们经常要根据类Class生成实例对象，如A a=new A() 工厂模式也是用来创建实例对象的，所以以后new时就要多个心眼，是否可以考虑使用工厂模式，虽然这样做，可能多做一些工作，但会给你系统带来更大的可扩展......
+      前言工厂模式是用工厂方法代替new操作的一种模式。著名的Jive论坛 ,就大量使用了工厂模式，工厂模式在Java程序系统可以说是随处可见。因为工厂模式就相当于创建实例对象的new，我们经常要根据类Class生成实例对象，如A a=new A() 工厂模式也是用来创建实例对象的，所以以后new时就要多个心眼，是否可以考虑使用工厂模式，虽然这样做，可能多做一些工作，但会给你系统带来更大的可扩展性......
     </div>
   </a>
   
@@ -492,15 +491,13 @@
       
     </h3>
     <div class="post-content-preview">
-      前言
-单例模式属于创建者模式，分为两类：
+      前言单例模式属于创建者模式，分为两类：
 
 饿汉式：类加载时就创建该单例对象
 懒汉式：类加载时不创建，首次使用时才创建
 
 
-一、饿汉式（静态变量）
-1234567891011121314151617181920212223242526/** * @author supercoedr * * 单例模式-饿汉式：静态变量创建单例对象 */public class Singleton &#123;......
+一、饿汉式（静态变量）1234567891011121314151617181920212223242526/** * @author supercoedr * * 单例模式-饿汉式：静态变量创建单例对象 */public class Singleton &#123;  ......
     </div>
   </a>
   
@@ -533,14 +530,12 @@
       
     </h3>
     <div class="post-content-preview">
-      前言
-在软件开发中，为了提高软件系统的可维护性和可复用性，增加软件的可扩展性和灵活性，要尽量根据6条原则来开发程序，从而提高软件开发效率、节约软件的开发成本和维护成本。
+      前言在软件开发中，为了提高软件系统的可维护性和可复用性，增加软件的可扩展性和灵活性，要尽量根据6条原则来开发程序，从而提高软件开发效率、节约软件的开发成本和维护成本。
 
-一、开闭原则
-对扩展开放，对修改关闭。
+一、开闭原则对扩展开放，对修改关闭。
 在程序需要进行扩展的时候，不能去修改原有代码，实现一个热插拔的效果。目的是使程序的扩展性更好，易于维护和升级。
 实现方式：接口和抽象类
-因为抽象灵活性好，适用性广，只要抽象的合理，基......
+因为抽象灵活性好，适用性广，只要抽象的合理，基本可......
     </div>
   </a>
   
@@ -573,13 +568,10 @@
       
     </h3>
     <div class="post-content-preview">
-      一、Maven安装配置
-Maven官网地址：https://maven.apache.org/
-下载地址：https://maven.apache.org/download.cgi
-下载到本地后解压即可。
+      一、Maven安装配置Maven官网地址：https://maven.apache.org/
+下载地址：https://maven.apache.org/download.cgi下载到本地后解压即可。
 1、配置本地仓库：
-在conf/settings.xml文件中配置maven本地仓库，找到如下代码块，配置localRepository
-12345678&lt;!-- localRepo......
+在conf/settings.xml文件中配置maven本地仓库，找到如下代码块，配置localRepository12345678&lt;!-- localReposit......
     </div>
   </a>
   
@@ -614,13 +606,12 @@ Maven官网地址：https://maven.apache.org/
     <div class="post-content-preview">
       
 一、Linux目录结构
-
 bin：存放二进制命令文件，该文件夹本身不是一个文件夹，而是usr/bin文件夹的链接。
 sbin：存放系统级的二进制命令文件，s(system)，同样是一个文件夹的链接，usr/sbin。
 lib：存放库文件，链接到usr/lib。
 lib64：存放64位相关的库文件，链接到usr/lib64。
 usr：存放用户所有的应用程序、文件和数据。
-boot：挂载引导分......
+boot：挂载引导分区......
     </div>
   </a>
   
@@ -653,11 +644,9 @@ boot：挂载引导分......
       
     </h3>
     <div class="post-content-preview">
-      前言
-提示：本文仅介绍常见加密技术，不对具体加密原理做分析
+      前言提示：本文仅介绍常见加密技术，不对具体加密原理做分析
 
-一、对称加密
-使用同一密钥进行加密和解密
+一、对称加密使用同一密钥进行加密和解密
 优势：加解密速度快，密文紧凑（加密后的密文大小不会变化太大）。
 缺点：
 
@@ -669,7 +658,7 @@ boot：挂载引导分......
 
 注意：对称加密的特点是加解密使用同一密钥
 
-著名对称......
+著名对称加密......
     </div>
   </a>
   
@@ -731,19 +720,19 @@ boot：挂载引导分......
   <div class="tags">
     
     
-    <a href="/tags/#设计模式" title="设计模式" rel="3">设计模式</a>
-    
-    
-    
     <a href="/tags/#加密技术" title="加密技术" rel="1">加密技术</a>
     
     
     
-    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
+    <a href="/tags/#设计模式" title="设计模式" rel="3">设计模式</a>
     
     
     
     <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
+    
+    
+    
+    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
     
     
   </div>
@@ -873,20 +862,20 @@ boot：挂载引导分......
 <div class="widget">
   <ul>
     
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
     <a href="/categories/#加密技术">
       <li>加密技术</li>
     </a>
     
-    <a href="/categories/#Maven">
-      <li>Maven</li>
+    <a href="/categories/#设计模式">
+      <li>设计模式</li>
     </a>
     
     <a href="/categories/#Linux">
       <li>Linux</li>
+    </a>
+    
+    <a href="/categories/#Maven">
+      <li>Maven</li>
     </a>
     
   </ul>
